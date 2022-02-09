@@ -1,0 +1,346 @@
+{
+  "properties": {
+    "study_name": "Demo Study",
+    "study_id": "DEMO01",
+    "instructions": "Any specific information or instructions for your users goes here.",
+    "post_url": "https://your-website/post.php",
+    "empty_msg": "No tasks to complete!",
+    "banner_url": "https://your-website/banner.png",
+    "support_url": "https://your-website/support",
+    "support_email": "support@your-website",
+    "cache": false
+  },
+  "modules": [
+    {
+      "type": "info",
+      "name": "Welcome to the Study",
+      "submit_text": "Dismiss",
+      "alerts": {
+        "duration": 1,
+        "random": false,
+        "sticky": false,
+        "times": [
+          {
+            "hours": 0,
+            "minutes": 0
+          }
+        ],
+        "start_offset": 0,
+        "random_interval": 30,
+        "timeout": false,
+        "timeout_after": 0,
+        "title": "Welcome to the study!",
+        "message": "Tap to open the app."
+      },
+      "graph": {
+        "display": false
+      },
+      "sections": [
+        {
+          "name": "About the study",
+          "questions": [
+            {
+              "id": "about_q1",
+              "type": "instruction",
+              "text": "<h1>Welcome to the study</h1>You will be asked several questions about your <em>child's word learning</em>.<br><br>You will receive several notifications per month. Please respond as soon as possible."
+            }
+          ],
+          "shuffle": false
+        }
+      ],
+      "shuffle": false
+    },
+    {
+      "type": "video",
+      "name": "Week 1: Unwind",
+      "submit_text": "FINISH",
+      "alerts": {
+        "duration": 1,
+        "random": false,
+        "sticky": false,
+        "times": [
+          {
+            "hours": 7,
+            "minutes": 0
+          }
+        ],
+        "start_offset": 0,
+        "random_interval": 30,
+        "timeout": false,
+        "timeout_after": 60000,
+        "title": "Welcome to the study!",
+        "message": "Tap to open the app."
+      },
+      "graph": {
+        "display": false
+      },
+      "sections": [
+        {
+          "name": "section 1: satzworter",
+          "questions": [
+            {
+              "id": "s1_image",
+              "type": "media",
+              "subtype": "image",
+              "src": "https://images.squarespace-cdn.com/content/v1/592db1e0cd0f6852c5df9874/1603214878704-8NMN7ZTO8ZKPYCAIRPUH/Learn+Arrows.png"
+            },
+            {
+              "id": "s1_inst",
+              "type": "instruction",
+              "text": "<center><h1><strong>Welcome to Section 1.</strong></h1></center>"
+            },
+            {
+              "id": "s1_q1",
+              "type": "multi",
+              "text": "Bitte",
+              "radio": false,
+              "shuffle": true,
+              "options": [
+                "Understands",
+                "Understands and uses"
+              ]
+            },
+            {
+              "id": "s1_q2",
+              "type": "multi",
+              "text": "Danke",
+              "radio": false,
+              "shuffle": true,
+              "options": [
+                "Understands",
+                "Understands and uses"
+              ]
+            },
+            {
+              "id": "s1_q3",
+              "type": "multi",
+              "text": "Nein",
+              "radio": false,
+              "shuffle": true,
+              "options": [
+                "Understands",
+                "Understands and uses"
+              ]
+            }
+          ]
+        }
+      ],
+      "shuffle": false
+    },
+    {
+      "type": "survey",
+      "name": "Sleep Diary",
+      "submit_text": "Done",
+      "alerts": {
+        "duration": 7,
+        "random": true,
+        "sticky": false,
+        "times": [
+          {
+            "hours": 8,
+            "minutes": 0
+          }
+        ],
+        "start_offset": 0,
+        "random_interval": 30,
+        "timeout": false,
+        "timeout_after": 60000,
+        "title": "Complete your sleep diary",
+        "message": "Tap to open the app."
+      },
+      "graph": {
+        "display": true,
+        "variable": "sleep_q2",
+        "title": "Hours Slept",
+        "blurb": "This graph displays the number of <em>hours</em> you have slept each night.",
+        "type": "bar",
+        "max_points": 7
+      },
+      "sections": [
+        {
+          "name": "Sleep Diary",
+          "questions": [
+            {
+              "id": "sleep_q0",
+              "type": "media",
+              "subtype": "image",
+              "src": "https://your-website/image.png"
+            },
+            {
+              "id": "sleep_q1",
+              "type": "instruction",
+              "text": "Please answer the following questions about your sleep last night."
+            },
+            {
+              "id": "sleep_q2",
+              "type": "text",
+              "subtype": "numeric",
+              "required": true,
+              "text": "The number of hours I slept last night in total:"
+            },
+            {
+              "id": "sleep_q3",
+              "type": "datetime",
+              "subtype": "time",
+              "required": true,
+              "text": "I went to bed last night at:"
+            },
+            {
+              "id": "sleep_q4",
+              "type": "datetime",
+              "required": true,
+              "text": "I got out of bed this morning at:",
+              "subtype": "time"
+            },
+            {
+              "id": "sleep_q5",
+              "type": "multi",
+              "radio": true,
+              "required": true,
+              "text": "Last night I fell asleep:",
+              "options": [
+                "Easily",
+                "After some time",
+                "With difficuly"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "survey",
+      "name": "Daily wellbeing check",
+      "submit_text": "Finish",
+      "alerts": {
+        "duration": 7,
+        "random": true,
+        "sticky": false,
+        "times": [
+          {
+            "hours": 9,
+            "minutes": 0
+          },
+          {
+            "hours": 17,
+            "minutes": 0
+          }
+        ],
+        "start_offset": 0,
+        "random_interval": 30,
+        "timeout": false,
+        "timeout_after": 60000,
+        "title": "Daily wellbeing check",
+        "message": "Tap to open the app."
+      },
+      "graph": {
+        "display": true,
+        "variable": "wellbeing_q2",
+        "title": "Positive Affect",
+        "blurb": "This graph displays your daily positive affect score.",
+        "type": "line",
+        "max_points": 7
+      },
+      "sections": [
+        {
+          "name": "Week 1",
+          "questions": [
+            {
+              "id": "wellbeing_img",
+              "type": "media",
+              "subtype": "image",
+              "src": "https://ashatte.io/schema/pics/drema_wellbeing.png"
+            },
+            {
+              "id": "wellbeing_q1",
+              "type": "instruction",
+              "text": "Please read each of the following statements and indicate how much the statement applied to you over the last week."
+            },
+            {
+              "id": "wellbeing_q3",
+              "type": "slider",
+              "required": true,
+              "text": "I couldn't seem to experience any positive feeling at all.",
+              "min": 1,
+              "max": 10,
+              "hint_left": "Never",
+              "hint_right": "Always"
+            },
+            {
+              "id": "wellbeing_q4",
+              "type": "slider",
+              "required": true,
+              "text": "I found it difficult to work up the initiative to do things.",
+              "min": 1,
+              "max": 10,
+              "hint_left": "Never",
+              "hint_right": "Always"
+            },
+            {
+              "id": "wellbeing_q5",
+              "type": "slider",
+              "required": true,
+              "text": "I tended to over-react to situations.",
+              "min": 1,
+              "max": 10,
+              "hint_left": "Never",
+              "hint_right": "Always"
+            }
+          ],
+          "shuffle": false
+        },
+        {
+          "name": "Week 1",
+          "questions": [
+            {
+              "id": "wellbeing_q6",
+              "type": "instruction",
+              "text": "Please read each of the following statements and indicate how much the statement applied to you over the last week."
+            },
+            {
+              "id": "wellbeing_q7",
+              "type": "slider",
+              "required": true,
+              "text": "I felt I had enough time to look after myself.",
+              "min": 1,
+              "max": 10,
+              "hint_left": "Never",
+              "hint_right": "Always"
+            },
+            {
+              "id": "wellbeing_q8",
+              "type": "slider",
+              "required": true,
+              "text": "I felt worried or stress.",
+              "min": 1,
+              "max": 10,
+              "hint_left": "Never",
+              "hint_right": "Always"
+            },
+            {
+              "id": "wellbeing_q9",
+              "type": "slider",
+              "required": true,
+              "text": "I felt that I could not sleep.",
+              "min": 1,
+              "max": 10,
+              "hint_left": "Never",
+              "hint_right": "Always"
+            },
+            {
+              "id": "wellbeing_q10",
+              "type": "slider",
+              "required": true,
+              "text": "I felt my heart beating through my chest.",
+              "min": 1,
+              "max": 10,
+              "hint_left": "Never",
+              "hint_right": "Always"
+            }
+          ],
+          "shuffle": false
+        }
+      ]
+    }
+  ]
+}
